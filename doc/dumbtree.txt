@@ -1,0 +1,56 @@
+===============================================================================
+TABLE OF CONTENTS                                               *dumbtree.nvim*
+
+1. Introduction...........................................*dumbtree.nvim_intro*
+2. Usage..................................................*dumbtree.nvim_usage*
+3. Keybindings......................................*dumbtree.nvim_keybindings*
+4. Plugin Options................................*dumbtree.nvim_plugin_options*
+
+===============================================================================
+INTRODUCTION                                              *dumbtree.nvim_intro*
+
+A neovim file tree using netrw so simple it's dumb.
+
+The main reason for creating this plugin was due to wanting a simple toggle for
+netrw to view files without needing to install a nerd font and 10 other things;
+I know I'm probably the only dev who doesn't like using nerd fonts, shoot me.
+
+===============================================================================
+USAGE                                                     *dumbtree.nvim_usage*
+
+To use this plugin, simply install it with your favorite plugin manager and
+then add the following to your init.vim:
+
+    require('dumbtree').setup()
+
+===============================================================================
+KEYBINDINGS                                         *dumbtree.nvim_keybindings*
+
+In terms of using the functionality of the plugin I have defined one custom
+keymapping to toggle the file tree:
+
+    vim.keymap.set('n', '<leader>b', ToggleNetrw, { noremap = true, silent = true })
+
+This results in you being able to press your leader key followed by b to
+toggle the file tree on and off.
+
+Also the following keymapping to go to netrw on the whole page:
+
+    vim.keymap.set('n', '-', ':Ex<CR>')
+
+I find this keymapping quite usful as it is the same to go back within netrw.
+
+===============================================================================
+PLUGIN OPTIONS                                   *dumbtree.nvim_plugin_options*
+
+Packer:
+
+    use 'nathanberry97/dumbtree.nvim'
+
+Lazy:
+
+    {
+        'nathanberry97/dumbtree.nvim',
+    }
+
+===============================================================================

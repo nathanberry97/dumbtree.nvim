@@ -4,7 +4,7 @@
 
 ## Preview
 
-![image](.img/preview.png)
+![image](./img/preview.png)
 
 > Features included in Dumbtree.nvim:
 > - Toggle for file tree
